@@ -13,7 +13,7 @@ public class AddNumbersTest {
 		
 		AddNumbers addNumbers = new AddNumbers();
 		assertEquals(0,addNumbers.add(""));
-		
+		assertEquals(1,addNumbers.add("1,"));
 	}
 
 }
