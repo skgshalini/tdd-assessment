@@ -15,6 +15,7 @@ public class AddNumbersTest {
 		assertEquals(0,addNumbers.add(""));
 		assertEquals(1,addNumbers.add("1,"));
 		assertEquals(6,addNumbers.add("1\n2,3"));
+		assertEquals(3,addNumbers.add("//;\n1;2"));
 	}
 
 }

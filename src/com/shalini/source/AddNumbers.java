@@ -10,7 +10,13 @@ public class AddNumbers {
             return sum;
         }
 		String delimiter = ",|\n";
-		String[] nums = string.split(delimiter);
+		String numbersWithoutDelimiter = string;
+		  if (numbersWithoutDelimiter.startsWith("//")) {
+	            String[] parts = numbersWithoutDelimiter.split("\n", 2);
+	            delimiter = parts[0].substring(2);
+	            numbersWithoutDelimiter = parts[1];
+	        }
+		String[] nums = numbersWithoutDelimiter.split(delimiter);
 		  for (String num : nums) {
 	            int n = Integer.parseInt(num);
 	            sum += n;
