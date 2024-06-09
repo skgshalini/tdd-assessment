@@ -9,7 +9,7 @@ public class AddNumbers {
 		if (string.isEmpty()) {
             return sum;
         }
-		String delimiter = ",";
+		String delimiter = ",|\n";
 		String[] nums = string.split(delimiter);
 		  for (String num : nums) {
 	            int n = Integer.parseInt(num);
